@@ -42,6 +42,12 @@
 - Hammerspoon
 
 ## 当前配置
+### Ghostty
+
+- Dracula 主题
+- JetBrains Mono Nerd Font
+- 半透明背景
+- 隐藏标题栏
 
 ### Zsh
 
@@ -68,26 +74,32 @@ alias la='eza -a --icons=auto'
 alias tree='eza --tree --level=2 --icons=auto'
 
 eval "$(starship init zsh)"
+
 Starship
 - Dracula 配色
 - 显示用户名、当前目录、Git 状态、开发环境和时间
+
 Zellij
 - Dracula 配色
 - 自定义 zjstatus 状态栏
 - 完整 Pane 边框
 - Option + H/J/K/L 切换 Pane
 - Option + N 新建 Pane
+
 Fastfetch
 - Dracula 配色
 - 图片 Agent Card
 - 显示系统、CPU、内存、磁盘、电池、Shell 和 Terminal
+
 btop
 - Dracula 主题
 - 透明背景
+
 Git
 - 使用 git-delta 增强 diff
 - side-by-side 模式
 - zdiff3 冲突显示
+
 Hammerspoon
 窗口快捷键：
 - ⌃⌥⌘ ←：左半屏
@@ -100,7 +112,9 @@ Hammerspoon
 - ⌃⌥⌘ G：Ghostty
 - ⌃⌥⌘ V：Visual Studio Code
 - ⌃⌥⌘ B：Google Chrome
+
 GNU Stow 管理的配置
+- ghostty
 - atuin
 - btop
 - fastfetch
