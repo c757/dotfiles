@@ -1,0 +1,67 @@
+layout {
+    default_tab_template {
+        children
+
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+
+                format_left "{tabs}"
+                format_center ""
+                format_right "{command_session}{command_uptime}{command_cpu}{command_memory}{command_battery}{datetime}"
+
+                format_space "#[fg=#F8F8F2]"
+                format_hide_on_overlength "true"
+                format_precedence "rlc"
+
+                hide_frame_for_single_pane "false"
+
+                mode_normal ""
+                mode_locked ""
+                mode_resize ""
+                mode_pane ""
+                mode_tab ""
+                mode_scroll ""
+                mode_session ""
+                mode_tmux ""
+
+                tab_normal "#[fg=#44475A]#[fg=#F8F8F2,bg=#44475A] {index} {name} #[fg=#44475A]"
+                tab_active "#[fg=#BD93F9]#[fg=#282A36,bg=#BD93F9,bold] {index} {name} #[fg=#BD93F9]"
+
+                tab_normal_fullscreen "#[fg=#44475A]#[fg=#F8F8F2,bg=#44475A] {index} {name} 󰊓 #[fg=#44475A]"
+                tab_active_fullscreen "#[fg=#BD93F9]#[fg=#282A36,bg=#BD93F9,bold] {index} {name} 󰊓 #[fg=#BD93F9]"
+
+                tab_normal_sync "#[fg=#44475A]#[fg=#F8F8F2,bg=#44475A] {index} {name}  #[fg=#44475A]"
+                tab_active_sync "#[fg=#BD93F9]#[fg=#282A36,bg=#BD93F9,bold] {index} {name}  #[fg=#BD93F9]"
+
+
+                command_session_command "/bin/bash -lc '$HOME/.config/zellij/scripts/status.sh session'"
+                command_session_format "#[fg=#50FA7B]#[fg=#282A36,bg=#50FA7B] #[fg=#F8F8F2,bg=#44475A] {stdout} #[fg=#44475A]"
+                command_session_interval "2"
+
+
+                command_uptime_command "/bin/bash -lc '$HOME/.config/zellij/scripts/status.sh uptime'"
+                command_uptime_format "#[fg=#8BE9FD]#[fg=#282A36,bg=#8BE9FD]󰔟 #[fg=#F8F8F2,bg=#44475A] {stdout} #[fg=#44475A]"
+                command_uptime_interval "30"
+
+
+                command_cpu_command "/bin/bash -lc '$HOME/.config/zellij/scripts/status.sh cpu'"
+                command_cpu_format "#[fg=#F1FA8C]#[fg=#282A36,bg=#F1FA8C] #[fg=#F8F8F2,bg=#44475A] {stdout} #[fg=#44475A]"
+                command_cpu_interval "2"
+
+
+                command_memory_command "/bin/bash -lc '$HOME/.config/zellij/scripts/status.sh memory'"
+                command_memory_format "#[fg=#FFB86C]#[fg=#282A36,bg=#FFB86C] #[fg=#F8F8F2,bg=#44475A] {stdout} #[fg=#44475A]"
+                command_memory_interval "2"
+
+
+                command_battery_command "/bin/bash -lc '$HOME/.config/zellij/scripts/status.sh battery'"
+                command_battery_format "#[fg=#FF79C6]#[fg=#282A36,bg=#FF79C6]󰂄 #[fg=#F8F8F2,bg=#44475A] {stdout} #[fg=#44475A]"
+                command_battery_interval "15"
+
+
+                datetime "#[fg=#BD93F9]#[fg=#282A36,bg=#BD93F9] #[fg=#F8F8F2,bg=#44475A] {format} #[fg=#44475A]"
+                datetime_format "%H:%M"
+            }
+        }
+    }
+}
