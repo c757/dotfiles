@@ -1,6 +1,6 @@
 # macOS Dotfiles
 
-这是我的个人 macOS 配置仓库，主要使用 **GNU Stow** 管理配置文件。
+个人 macOS 配置仓库，主要使用 **GNU Stow** 管理配置文件。
 
 ## 已安装工具
 
