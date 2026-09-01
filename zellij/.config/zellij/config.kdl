@@ -355,7 +355,7 @@ default_mode "normal"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-// default_layout "compact"
+default_layout "work"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
@@ -381,7 +381,7 @@ default_mode "normal"
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames true
  
 // Set the pane frame style when pane_frames is enabled
 // Options:
